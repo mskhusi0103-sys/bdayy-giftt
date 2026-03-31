@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gift Page</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      color: #5a3e2b;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 30px 20px;
+    }
+
+    img, video {
+      margin-top: 30px;
+      width: 250px;
+      border-radius: 15px;
+    }
+
+    a {
+      color: #8b5e3c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #8b5e3c;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #6f472c;
+    }
+
+    .page {
+      display: none;
+    }
+
+    #page1 {
+      display: block;
+    }
+
+    textarea {
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      resize: none;
+      width: 90%;
+      max-width: 500px;
+      margin: 20px auto 40px auto;
+      display: block;
+    }
+
+    /* PAGE 6 FIXED */
+    #page6 {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
+      overflow: hidden;
+    }
+
+    .side-cat {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 290px; /* bigger now */
+      max-width: 24vw;
+      border-radius: 22px;
+      z-index: 2;
+      margin-top: 0;
+    }
+
+    #cat7 {
+      left: 180px; /* closer to candle */
+    }
+
+    #cat8 {
+      right: 180px; /* closer to candle */
+    }
+
+    .candle-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 3;
+    }
+
+    #candleVideo {
+      width: 320px;
+      max-width: 30vw;
+      height: auto;
+      max-height: 80vh;
+      border-radius: 20px;
+      margin-top: 0;
+    }
+
+    /* PAGE 7 */
+    #page7 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    #birthday {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      margin-top: 0;
+      border-radius: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .side-cat {
+        width: 230px;
+        max-width: 23vw;
+      }
+
+      #cat7 {
+        left: 100px;
+      }
+
+      #cat8 {
+        right: 100px;
+      }
+
+      #candleVideo {
+        width: 280px;
+        max-width: 34vw;
+      }
+    }
+
+    @media (max-width: 800px) {
+      .side-cat {
+        width: 170px;
+        max-width: 24vw;
+      }
+
+      #cat7 {
+        left: 30px;
+      }
+
+      #cat8 {
+        right: 30px;
+      }
+
+      #candleVideo {
+        width: 240px;
+        max-width: 42vw;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .side-cat {
+        width: 120px;
+        max-width: 24vw;
+      }
+
+      #cat7 {
+        left: 10px;
+      }
+
+      #cat8 {
+        right: 10px;
+      }
+
+      #candleVideo {
+        width: 210px;
+        max-width: 50vw;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+  <div id="page1" class="page">
+    <h1>PLZ ACCEPT MY GIFT</h1>
+    <img src="cat1.jpg" alt="Cute Cat">
+    <div class="buttons">
+      <button onclick="goToFormPage()">YES</button>
+      <button onclick="showPage2()">NO</button>
+    </div>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div id="page2" class="page">
+    <h1>whyyy did u click noo?? 😭</h1>
+    <img src="crycat.jpg" alt="Crying Cat">
+    <div class="buttons">
+      <button onclick="goBack()">Try Again</button>
+    </div>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div id="page3" class="page">
+    <p>
+      Ab itni pyari ladki gift de rhi hai to wo test to legi hi na <br>
+      Dont wry easy haiii only if uk 
+    </p>
+    <p>
+      Click heree 
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSdYdouIKKUop0DTwCTEh1O6JBQy5FWimrzewX2kPuLoH4xw/viewform?usp=publish-editor" target="_blank">
+        this
+      </a>
+    </p>
+    <div class="buttons">
+      <button onclick="showFinalPage()">NEXT </button>
+    </div>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div id="page4" class="page">
+    <h1>Chal bhai le hi le tu gift </h1>
+    <img src="cat2.jpg" alt="Cute Cat 2">
+    <p>
+      <a href="https://openwhenletters.app/c/b51c93d0-2e34-429a-a55f-8b4cef36b629/v/ade5a8063759cb3ded437868c2eee24930240a7b1726055ef0bc849e6a38401d">
+        Chal isse na Last me kholna ok? 💌
+      </a>
+    </p>
+    <div class="buttons">
+      <button onclick="nextGift()">NEXT ➡️</button>
+    </div>
+  </div>
+
+  <!-- PAGE 5 -->
+  <div id="page5" class="page">
+    <h1>Now rukja 2min. Put ur headphones nd just listen.</h1>
+    <div style="margin-top:20px;">
+      <video id="cat3Video" width="320" height="240" autoplay loop muted playsinline>
+        <source src="cat3.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div style="margin-top:20px;">
+      <video id="voiceNote" width="320" height="50" controls>
+        <source src="ABC.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="buttons" style="margin-top:30px;">
+      <button onclick="continueAfterVN()">Emotional nhi hona, Continue..</button>
+    </div>
+    <textarea readonly>
+Awkrd ho gya..
+    </textarea>
+  </div>
+
+  <!-- PAGE 6 -->
+  <div id="page6" class="page">
+    <!-- Left Cat -->
+    <img id="cat7" class="side-cat" src="cat7.jpg" alt="Cat 7">
+
+    <!-- Right Cat -->
+    <img id="cat8" class="side-cat" src="cat8.jpg" alt="Cat 8">
+
+    <!-- Candle Center -->
+    <div class="candle-wrap">
+      <video id="candleVideo" autoplay loop muted playsinline>
+        <source src="candel.mp4" type="video/mp4">
+      </video>
+
+      <button class="continue-btn"
+              style="margin-top:15px; padding:12px 30px; font-size:16px; border-radius:8px;
+                     background-color:#8b5e3c; color:white; border:none; cursor:pointer;"
+              onclick="showPage7()">
+        Continue
+      </button>
+    </div>
+  </div>
+
+  <!-- PAGE 7 -->
+  <div id="page7" class="page">
+    <video id="birthday" playsinline>
+      <source src="bday.mp4" type="video/mp4">
+    </video>
+
+    <button id="continue7Btn"
+            style="position:absolute; bottom:50px; left:50%; transform:translateX(-50%);
+                   padding:15px 35px; font-size:18px; border:none; border-radius:8px;
+                   background-color:#8b5e3c; color:white; cursor:pointer; display:none;"
+            onclick="goBackToStart()">
+      Bass itna hi tha..
+    </button>
+  </div>
+
+<script>
+  // Function to show any page
+  function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(p => p.style.display = 'none');
+    document.getElementById(pageId).style.display = 'block';
+  }
+
+  // Navigation functions
+  function goToFormPage() { showPage('page3'); }
+  function showPage2() { showPage('page2'); }
+  function goBack() { showPage('page1'); }
+  function showFinalPage() { showPage('page4'); }
+  function nextGift() { showPage('page5'); }
+  function continueAfterVN() { showPage('page6'); }
+
+  // PAGE 7
+  function showPage7() {
+    showPage('page7');
+
+    const continueBtn = document.getElementById('continue7Btn');
+    const bdayVideo = document.getElementById('birthday');
+
+    continueBtn.style.display = 'none';
+
+    // reset video
+    bdayVideo.pause();
+    bdayVideo.currentTime = 0;
+    bdayVideo.loop = false;
+    bdayVideo.muted = false;
+    bdayVideo.volume = 1;
+
+    // try play with audio
+    bdayVideo.play().then(() => {
+      console.log("Birthday video playing with audio.");
+    }).catch((err) => {
+      console.log("Autoplay with sound blocked:", err);
+
+      // fallback if browser blocks
+      bdayVideo.muted = true;
+      bdayVideo.play().catch(e => console.log("Fallback failed:", e));
+    });
+
+    // button after 4 sec
+    setTimeout(() => {
+      continueBtn.style.display = 'block';
+    }, 4000);
+  }
+
+  function goBackToStart() {
+    const bdayVideo = document.getElementById('birthday');
+    bdayVideo.pause();
+    bdayVideo.currentTime = 0;
+    showPage('page1');
+  }
+
+  // autoplay candle video
+  const candleVideo = document.getElementById('candleVideo');
+  candleVideo.play().catch(() => console.log("Candle video autoplay blocked."));
+</script>
+
+</body>
+</html>
